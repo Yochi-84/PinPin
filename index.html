@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拚拚</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <link rel="stylesheet" href="./css/all.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Navbar-->
+  <div class="nav p-relative">
+    <div class="nav-body margin-center d-flex">
+      <h2 class="logo ml-lg-2"><a href="#">Logo</a></h2>
+      <ul class="nav-list d-flex align-items-center ml-3">
+        <li><a href="#">關於</a></li>
+        <li><a href="#">挖寶</a></li>
+        <li><a href="#">我有個大膽的想法</a></li>
+      </ul>
+      <div class="nav-btn-list d-flex align-items-center mr-lg-2">
+        <a href="javascript:showLogin();" class="btn btn-primary mr-2">登入</a>
+        <a href="#" class="btn btn-secondary">註冊</a>
+      </div>
+      <div class="hamburger-menu mr-lg-1-4 py-md-2 d-none" id="hamburger-menu">
+        <i class='bx bx-menu'></i>
+      </div>
+    </div>
+  </div>
+  <div class="hamburger-menu-list p-fixed d-flex flex-column d-none" id="hamburger-menu-list">
+    <ul>
+      <li class="text-right fs-5"><a href="javascript:closeHamburgerMenu();"
+          class="hamburger-menu-list-close mr-3 mt-3"><i class='bx bx-x'></i></a></li>
+      <li><a href="#" class="hamburger-menu-list-item">關於</a></li>
+      <li><a href="#" class="hamburger-menu-list-item">挖寶</a></li>
+      <li><a href="#" class="hamburger-menu-list-item">我有個大膽的想法</a></li>
+    </ul>
+    <div class="hamburger-menu-btn mb-4 px-4">
+      <a href="javascript:hamburger_showLogin();" class="btn-fluid btn-primary hamburger-menu-list-item mb-1-5"><i
+          class='bx bxs-door-open'></i>
+        登入</a>
+      <a href="#" class="btn-fluid btn-secondary hamburger-menu-list-item"><i class='bx bxs-user-plus'></i> 註冊</a>
+    </div>
+  </div>
+
+  <!-- Project -->
+  <div class="project-body py-6 py-sm-2-1 px-2 px-sm-1-4">
+    <div class="l-project margin-center">
+      <div class="l-project-product">
+        <span class="l-project-tag tag color-white">魔法科技</span>
+        <h1 class="l-project-title">拍出會動的照片｜LivePhotos 魔法拍立得</h1>
+        <div class="l-project-img">
+          <img src="./images/produt_image.jpg" alt="拍出會動的照片｜LivePhotos 魔法拍立得">
+        </div>
+      </div>
+      <div class="l-project-detail">
+        <div class="l-project-info">
+          <table>
+            <tr>
+              <td colspan="2" class="target">目標$600,000</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="content current">$280,047</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="progress">41%</td>
+            </tr>
+            <tr>
+              <td class="sub-title">贊助人數</td>
+              <td class="sub-title">募資倒數</td>
+            </tr>
+            <tr>
+              <td class="content">1374 人</td>
+              <td class="content">27 天</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="property">
+                <span class="product-property" data-content="認證標章"><img src="./images/icon_good01.svg"
+                    style="width: 20px; height: 20px"></span>
+                <span class="product-property" data-content="品質保證"><img src="./images/icon_good02.svg"
+                    style="width: 20.8px; height: 20px"></span>
+                <span class="product-property" data-content="原生創意"><img src="./images/icon_good03.svg"
+                    style="width: 16.7px; height: 20px"></span>
+                <span class="product-property" data-content="人氣王"><img src="./images/icon_good04.svg"
+                    style="width: 20px; height: 18.4px"></span>
+              </td>
+            </tr>
+          </table>
+          <div class="l-remark">
+            <p class="l-remark-content">專案募資中！</p>
+            <p class="l-remark-content">在 <span class="fw-7">2021/06/14 23:59</span> 募資結束前，您都可以贊助我們！</p>
+          </div>
+        </div>
+        <a class="l-project-donate btn-fluid btn-primary">贊助專案</a>
+        <div class="l-project-like">
+          <a href="#" class="follow flex-center mr-1"><i class='bx bxs-heart'></i>追蹤專案</a>
+          <a href="#" class="share flex-center"><i class='bx bxs-share-alt'></i>分享</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Information -->
+  <div class="tabs bg-white p-relative">
+    <ul class="tabs-list margin-center">
+      <li>
+        <a href="javascript:;" onclick="tabsToggle(this.id)" id="introduce"
+          class="tabs-item mr-2-4 mr-sm-0-5 is-active">專案介紹</a>
+      </li>
+      <li>
+        <a href="javascript:;" onclick="tabsToggle(this.id)" id="faq" class="tabs-item mr-2-4 mr-sm-0-5">常見問答</a>
+      </li>
+      <li>
+        <a href="javascript:;" onclick="tabsToggle(this.id)" id="progress" class="tabs-item mr-2-4 mr-sm-0-5"> 目前進度</a>
+      </li>
+      <li>
+        <a href="javascript:;" onclick="tabsToggle(this.id)" id="message" class="tabs-item mr-2-4 mr-sm-0">留言</a>
+      </li>
+    </ul>
+  </div>
+  <div class="info-body margin-center d-grid py-6 px-2 pt-sm-4 pb-sm-6 px-sm-1-4">
+    <div class="tabs-content mb-lg-6">
+      <div class="introduce" id="introduce-body">
+        <div class="l-chapter">
+          <div class="l-chapter-img">
+            <img src="./images/p1.jpg" alt="施了魔法的照片">
+          </div>
+          <h3 class="l-chapter-title">施了魔法的照片</h3>
+          <p class="l-chapter-content">
+            史美爾斯在不經意間這樣說過，書籍把我們引入最美好的社會，使我們認識各個時代的偉大智者。這讓我思索了許久，蘇格拉底有一句座右銘，希望的燈一旦熄滅，生活剎那間變成了一片黑暗。這啟發了我，了解清楚施了魔法的照片到底是一種怎麽樣的存在，是解決一切問題的關鍵。所謂施了魔法的照片，關鍵是施了魔法的照片需要如何寫。
+          </p>
+        </div>
+        <div class="l-chapter">
+          <div class="l-chapter-img">
+            <img src="./images/p2.jpg" alt="留下當下的美好">
+          </div>
+          <h3 class="l-chapter-title">留下當下的美好</h3>
+          <p class="l-chapter-content">
+            易卜生在不經意間這樣說過，偉大的事業，需要決心，能力，組織和責任感。這讓我深深地想到，我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。，更多留下當下的美好的意義是這樣的，培根告訴我們，合理安排時間，就等於節約時間。這不禁令我深思。那麽，蒙田告訴我們，沉默較之言不由衷的話更有益於社交。這不禁令我深思。留下當下的美好因何而發生？要想清楚，留下當下的美好。
+          </p>
+        </div>
+      </div>
+      <div class="faq d-none" id="faq-body">
+        <div class="l-accordion mb-2 ">
+          <div>
+            <h6><a href="javascript:;" class="l-accordion-title" id="accordion1">影片拍完之後可以編輯嗎？<i
+                  class='bx bx-chevron-down'></i></a></h6>
+          </div>
+          <div class="l-accordion-content" id="accordion1-content">
+            可以進行簡易的編輯，內建 5 種濾鏡，影片秒數有3秒、5秒、10秒可以選擇，拍完的當下可以編輯要印出來的影片範圍哦！
+          </div>
+        </div>
+        <div class="l-accordion mb-2 ">
+          <div>
+            <h6><a href="javascript:;" class="l-accordion-title" id="accordion2">有提供保固或維修服務嗎？<i
+                  class='bx bx-chevron-down'></i></a></h6>
+          </div>
+          <div class="l-accordion-content" id="accordion2-content">
+            有，詳情請洽服務人員。
+          </div>
+        </div>
+        <div class="l-accordion mb-2 ">
+          <div>
+            <h6><a href="javascript:;" class="l-accordion-title" id="accordion3">補充包底片要去哪裡購買呢？<i
+                  class='bx bx-chevron-down'></i></a></h6>
+          </div>
+          <div class="l-accordion-content" id="accordion3-content">
+            詳情請洽服務人員。
+          </div>
+        </div>
+        <div class="l-accordion mb-2 ">
+          <div>
+            <h6><a href="javascript:;" class="l-accordion-title" id="accordion4">印出來的拍立得照片需要充電嗎？<i
+                  class='bx bx-chevron-down'></i></a></h6>
+          </div>
+          <div class="l-accordion-content" id="accordion4-content">
+            幫照片充電是一個很有創意的想法呢 !
+          </div>
+        </div>
+        <div class="l-accordion mb-2 ">
+          <div>
+            <h6><a href="javascript:;" class="l-accordion-title" id="accordion5">運送方式及付款方式有哪些呢？<i
+                  class='bx bx-chevron-down'></i></a></h6>
+          </div>
+          <div class="l-accordion-content" id="accordion5-content">
+            你斗內，我送貨，運費都我的。
+          </div>
+        </div>
+        <div class="l-accordion mb-2 ">
+          <div>
+            <h6><a href="javascript:;" class="l-accordion-title" id="accordion6">退換貨方式及規則<i
+                  class='bx bx-chevron-down'></i></a></h6>
+          </div>
+          <div class="l-accordion-content" id="accordion6-content">
+            商品寄出，恕不退換貨喔!!!
+          </div>
+        </div>
+      </div>
+      <div class="progress d-none" id="progress-body">
+        <div class="l-activity mb-2">
+          <div class="l-activity-img">
+            <img src="./images/news01.jpg" alt="高雄體驗會">
+          </div>
+          <div class="l-activity-info">
+            <h6 class="l-activity-title">高雄體驗會｜免費參加送帆布袋</h6>
+            <small class="l-activity-date">2021-6-20</small>
+            <p class="l-activity-content">
+              大家安安！謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！
+            </p>
+            <a href="#" class="l-activity-more">More</a>
+          </div>
+        </div>
+        <div class="l-activity mb-2">
+          <div class="l-activity-img">
+            <img src="./images/news02.jpg" alt="高雄體驗會">
+          </div>
+          <div class="l-activity-info">
+            <h6 class="l-activity-title">高雄體驗會｜免費參加送帆布袋</h6>
+            <small class="l-activity-date">2021-6-20</small>
+            <p class="l-activity-content">
+              大家安安！謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！
+            </p>
+            <a href="#" class="l-activity-more">More</a>
+          </div>
+        </div>
+        <div class="l-activity mb-2">
+          <div class="l-activity-img">
+            <img src="./images/news03.jpg" alt="高雄體驗會">
+          </div>
+          <div class="l-activity-info">
+            <h6 class="l-activity-title">高雄體驗會｜免費參加送帆布袋</h6>
+            <small class="l-activity-date">2021-6-20</small>
+            <p class="l-activity-content">
+              大家安安！謝謝每位贊助者的熱情支持，讓我們離夢想更進一步，我們將於下個月舉辦體驗會，歡迎各位踴躍參與！
+            </p>
+            <a href="#" class="l-activity-more">More</a>
+          </div>
+        </div>
+      </div>
+      <div class="message d-none" id="message-body">
+        <div class="l-remark mb-4">
+          <p class="l-remark-content message-content">
+            只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎<span class="font-secondary">聯絡提案人</span>！
+          </p>
+        </div>
+        <div class="l-msg mb-2">
+          <div class="l-msg-img">
+            <img src="./images/user_img01.jpg" alt="廖小杰">
+          </div>
+          <div class="l-msg-poster">
+            <h6 class="l-msg-user">廖小杰</h6>
+            <small class="l-msg-date">2020年5月22日 11:32</small>
+          </div>
+          <div class="l-msg-content w-100">
+            <p>晚上起床上廁所看到照片裡的人一直動其實有點恐怖，希望可以有暫停或是定時的功能！</p>
+          </div>
+          <div class="l-msg-reply w-100">
+            <h6 class="l-msg-replier">提案者回覆</h6>
+            <p>你要嘛起床的時候開燈，要嘛給我們更多錢開發阿</p>
+          </div>
+        </div>
+        <div class="l-msg mb-2">
+          <div class="l-msg-img">
+            <img src="./images/user_img02.jpg" alt="卡阿伯">
+          </div>
+          <div class="l-msg-poster">
+            <h6 class="l-msg-user">卡阿伯</h6>
+            <small class="l-msg-date">2020年5月22日 11:32</small>
+          </div>
+          <div class="l-msg-content w-100">
+            <p>希望有更多花色可以選擇！我女兒最近喜歡綠色</p>
+          </div>
+        </div>
+        <div class="l-msg mb-2">
+          <div class="l-msg-img">
+            <img src="./images/user_img02.jpg" alt="賈師">
+          </div>
+          <div class="l-msg-poster">
+            <h6 class="l-msg-user">賈師</h6>
+            <small class="l-msg-date">2020年5月22日 11:32</small>
+          </div>
+          <div class="l-msg-content w-100">
+            <p>可以做個相簿功能嗎？拍出好看的影片再讓我們選擇要印出哪一張這樣</p>
+          </div>
+        </div>
+        <div class="l-msg mb-md-4">
+          <div class="l-msg-img">
+            <img src="./images/user_img02.jpg" alt="俊俊">
+          </div>
+          <div class="l-msg-poster">
+            <h6 class="l-msg-user">俊俊</h6>
+            <small class="l-msg-date">2020年5月22日 11:32</small>
+          </div>
+          <div class="l-msg-content w-100">
+            <p>test123 看一下我是不是真的可以留言</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-list">
+      <div class="store d-flex flex-wrap mb-4-6 p-2">
+        <div class="store-img circle mr-2">
+          <img src="./images/store_img.jpg" alt="缺錢事務所">
+        </div>
+        <div class="store-name">
+          <h4 class="mb-0-7 mt-2-2">缺錢事務所</h4>
+          <small>已發起 1 個專案</small>
+        </div>
+        <div class="store-description mt-2">
+          需要點錢錢做些酷酷的東西，拜託各位乾爹乾媽囉！
+        </div>
+        <div class="store-about d-flex align-items-center mt-2 w-100">
+          <div class="store-link fs-0">
+            <a href="#" class="btn circle color-white mr-1"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="btn circle color-white"><i class='bx bxl-youtube'></i></a>
+          </div>
+          <a href="#" class="store-contact btn py-0-6 px-1-5">
+            <i class='bx bx-message-rounded-dots'></i> 聯絡我們
+          </a>
+        </div>
+
+      </div>
+      <h2 class="card-list-title">選擇一個方案來支持</h2>
+      <div class="l-card mb-2">
+        <div class="l-card-img">
+          <img src="./images/plan_img.jpg" alt="團購優惠">
+        </div>
+        <div class="l-card-info">
+          <div class="l-card-bonus">
+            <small>限時優惠</small>
+            <small>2 days 20:05:20</small>
+          </div>
+          <h3 class="l-card-title">買一送一，只有兩百組別錯過</h3>
+          <p class="l-card-price">NT$1,600</p>
+          <div class="l-card-tag">
+            <span class="l-card-tag-donate tag">已被贊助88次</span>
+            <span class="l-card-tag-limit tag mb-1">限量<span>200</span>個</span>
+          </div>
+          <p class="l-card-text mb-2">
+            資料庫直到運用他還眼前尤其引導發表指標之後美元那裡威望位元，明顯經營，表演不足專題不需要。
+          </p>
+          <a href="#" class="l-card-donate btn-fluid btn-primary">贊助此專案</a>
+        </div>
+      </div>
+      <div class="l-card mb-2">
+        <div class="l-card-img">
+          <img src="./images/plan_img.jpg" alt="團購優惠">
+        </div>
+        <div class="l-card-info">
+          <div class="l-card-bonus">
+            <small>限時優惠</small>
+            <small>2 days 20:05:20</small>
+          </div>
+          <h3 class="l-card-title">買一送一，只有兩百組別錯過</h3>
+          <p class="l-card-price">NT$1,600</p>
+          <div class="l-card-tag">
+            <span class="l-card-tag-donate tag">已被贊助88次</span>
+            <span class="l-card-tag-limit tag mb-1">限量<span>200</span>個</span>
+          </div>
+          <p class="l-card-text mb-2">
+            資料庫直到運用他還眼前尤其引導發表指標之後美元那裡威望位元，明顯經營，表演不足專題不需要。
+          </p>
+          <a href="#" class="l-card-donate btn-fluid btn-primary">贊助此專案</a>
+        </div>
+      </div>
+      <div class="l-card mb-2">
+        <div class="l-card-img">
+          <img src="./images/plan_img.jpg" alt="團購優惠">
+        </div>
+        <div class="l-card-info">
+          <div class="l-card-bonus">
+            <small>限時優惠</small>
+            <small>2 days 20:05:20</small>
+          </div>
+          <h3 class="l-card-title">買一送一，只有兩百組別錯過</h3>
+          <p class="l-card-price">NT$1,600</p>
+          <div class="l-card-tag">
+            <span class="l-card-tag-donate tag">已被贊助88次</span>
+            <span class="l-card-tag-limit tag mb-1">限量<span>200</span>個</span>
+          </div>
+          <p class="l-card-text mb-2">
+            資料庫直到運用他還眼前尤其引導發表指標之後美元那裡威望位元，明顯經營，表演不足專題不需要。
+          </p>
+          <a href="#" class="l-card-donate btn-fluid btn-primary">贊助此專案</a>
+        </div>
+      </div>
+      <div class="l-card mb-4 mb-lg-2">
+        <div class="l-card-img">
+          <img src="./images/plan_img.jpg" alt="團購優惠">
+        </div>
+        <div class="l-card-info">
+          <div class="l-card-bonus">
+            <small>限時優惠</small>
+            <small>2 days 20:05:20</small>
+          </div>
+          <h3 class="l-card-title">買一送一，只有兩百組別錯過</h3>
+          <p class="l-card-price">NT$1,600</p>
+          <div class="l-card-tag">
+            <span class="l-card-tag-donate tag">已被贊助88次</span>
+            <span class="l-card-tag-limit tag mb-1">限量<span>200</span>個</span>
+          </div>
+          <p class="l-card-text mb-2">
+            資料庫直到運用他還眼前尤其引導發表指標之後美元那裡威望位元，明顯經營，表演不足專題不需要。
+          </p>
+          <a href="#" class="l-card-donate btn-fluid btn-primary">贊助此專案</a>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="text-center mb-0-4">
+        <img src="./images/icon_heart.svg" alt="贊助專案">
+      </div>
+      <h3 class="form-title d-flex p-relative mb-3">贊助專案</h3>
+      <form action="" class="d-flex flex-column">
+        <label for="plan" class="mb-1">贊助方案</label>
+        <div id="plan" class="l-select" onclick="boxToggle('plan')">
+          <span id="plan-text">請選擇一個方案</span>
+          <ul id="plan-list" class="l-select-list d-none">
+            <li onclick="selectionToggle(event,'plan')">方案A - 乾爹乾媽斗內我</li>
+            <li onclick="selectionToggle(event,'plan')">方案B - 乾爹乾媽斗內我 2 次</li>
+          </ul>
+        </div>
+        <p class="err-msg mt-0-4 d-none">請選擇方案</p>
+        <label for="receiver" class="mt-2 mb-1">收件人姓名</label>
+        <input type="text" id="receiver">
+        <p class="err-msg mt-0-4 d-none">請輸入收件人姓名</p>
+        <label for="phone" class="mt-2 mb-1">連絡電話</label>
+        <input type="text" id="phone">
+        <p class="err-msg mt-0-4 d-none">請輸入正確的電話格式</p>
+        <label for="email" class="mt-2 mb-1 is-error">連絡信箱</label>
+        <input type="email" id="email">
+        <p class="err-msg mt-0-4">請輸入正確的郵件格式</p>
+        <label for="pay" class="mt-2 mb-1">付款方式</label>
+        <div id="pay" class="l-select mb-3" onclick="boxToggle('pay')">
+          <span id="pay-text">信用卡付款</span>
+          <ul id="pay-list" class="l-select-list d-none">
+            <li onclick="selectionToggle(event,'pay')">信用卡付款</li>
+            <li onclick="selectionToggle(event,'pay')">超商取貨付款</li>
+            <li onclick="selectionToggle(event,'pay')">宅配貨到付款</li>
+          </ul>
+        </div>
+        <a href="javascript:;" class="form-submit btn btn-primary margin-center">贊助專案</a>
+      </form>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    Copyright ©2022 拼拼 All rights reserved.
+  </div>
+
+  <!-- popup -->
+  <div class="l-login" id="login-popup">
+    <div class="l-login-header">
+      <h3 class="l-login-title">登入</h3>
+      <a href="javascript:hideLogin();"><i class='bx bx-x'></i></a>
+    </div>
+    <div class="l-login-body">
+      <label for="login-account">帳號</label>
+      <input type="text" id="login-account" class="mb-2">
+      <label for="login-password">密碼</label>
+      <input type="text" id="login-password" class="mb-1">
+      <a href="#" class="l-login-forget mb-2">忘記密碼？</a>
+      <a href="#" class="btn-fluid btn-primary mb-6 l-login-btn">登入</a>
+      <small class="l-login-link">
+        <a href="#">還沒有帳號？<span class="color-secondary">註冊一個帳號</span></a>
+      </small>
+    </div>
+  </div>
+
+  <!-- mask -->
+  <div class="mask p-fixed d-none" id="mask"></div>
+
+  <script src="./js/all.js"></script>
+</body>
+
+</html>
